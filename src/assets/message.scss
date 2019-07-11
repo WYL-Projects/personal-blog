@@ -1,0 +1,22 @@
+.message{
+    background: #d9edf7;
+    border-radius: 4px;
+    border:1px dashed #7ca4c1;
+    padding: 15px;
+    color: #337ab7;
+    .questioner{
+        .icon{
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+        .questioner-name{
+            font-weight: 600;
+        }
+        .recall{
+            cursor: pointer;
+            &:hover{
+                color:#365d80
+            }
+        }
+    }
+}

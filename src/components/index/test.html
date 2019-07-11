@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div1"></div>
+    <script>
+        let r = 175,
+            g = 72,
+            b = 72;
+        let arr = [r, g, b]
+        const div = document.getElementById("div1");
+        div.innerText = `r=${arr[0]},g=${arr[1]},b=${arr[2]}`
+        function colorful(index){
+            let flag = true;
+             let timer = setInterval(()=>{
+                 arr[index]<175&&flag?arr[index]++:(arr[index]--,flag=false); 
+                 div.innerText = `r=${arr[0]},g=${arr[1]},b=${arr[2]}`;
+                 if(arr[index]==72||arr[index]==175) {
+                    clearInterval(timer);
+                    index==2?index=0:index++;
+                    colorful(index);
+                 }
+       },10) }
+    
+       colorful(2);
+    </script>
+</body>
+
+</html>

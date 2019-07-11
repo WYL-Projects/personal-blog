@@ -1,0 +1,11 @@
+.guestbook{
+    .content{
+        padding: 30px 20px;
+        background: #fff;
+        line-height: 30px;
+        >p:not(.xx){
+            color: red;
+        }
+    }
+    
+}

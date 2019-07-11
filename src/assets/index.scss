@@ -1,0 +1,188 @@
+%word-wrap{
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space:normal;
+}
+html,
+body {
+  width: 100%;
+  font-size: 14px;
+  .index-container {
+    background: url(../assets/images/bg.jpg);
+    width: 100%;
+    overflow: hidden;
+    .main {
+      width: 1170px;
+      margin: 75px auto;
+      height: 100%;
+      &:after{
+        display: block;
+        visibility: hidden;
+        clear: both;
+        content: "";
+        height: 0;
+      }
+      .left {
+        width: 66.66667%;
+        padding-right: 25px;
+        box-sizing: border-box;
+        float: left;
+        .everyday {
+          background: #fff;
+          box-shadow: 1px 1px 6px rgba($color: #000000, $alpha: 0.5),-1px -1px 6px rgba($color: #000000, $alpha: 0.5) ;
+          padding:5px 15px 15px 15px;
+          border-radius: 3px;
+          line-height: 40px;
+          font-size: 14px;
+          @extend  %word-wrap;
+          .everyday-title {
+            font-size: 12px;
+            .glyphicons {
+              font-family: myFirstFont;
+              &::before {
+                display: inline-block;
+                content: "\e122";
+              }
+            }
+          }
+        }
+        .tag{
+            border-radius: 3px;
+            border: 1px solid #bfbfbf;
+            padding:20px 15px;
+            background: #fff;
+            margin-top: 25px;
+            line-height: 40px;
+            .tagTitle{
+                font-size: 20px;
+                cursor: pointer;
+                a{
+                    color: black;
+                    &:hover{
+                        color: #337ab7;
+                    }
+                }
+            }
+            .tagContent{
+                line-height: 22px;
+                letter-spacing: .05em;
+                @extend  %word-wrap
+            }
+        }
+        .tag-info{
+            background: #000000;
+            color: #fff;
+            padding: 5px 15px;  
+            >span:last-child{
+                a{
+                    color: white;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .turning-page{
+          text-align: center;
+          padding: 10px 5px;
+        }
+      }
+      .right {
+        width: 33.33333%;
+        float: left;
+        .panel{
+            background-color: #191818;
+            border-radius: 5px;
+            margin-top: 15px;
+            &:first-child{
+              margin-top: 0;
+            }
+            .label-title{
+                padding: 10px 15px;
+                border-bottom: 1px solid transparent;
+            }
+            .panel-content{
+                font-size: 14px;
+                background: #1f1f1f;
+                padding: 15px;
+                border-radius: 5px;
+                line-height: 25px;
+               &.cloud-labels{
+                 @extend  %word-wrap;
+                 .label{
+                   cursor: pointer;
+                 }
+               }
+            }
+            %sameStyle1{
+              color: white;
+              font-size: 14px;
+              padding: 0; 
+            }
+            %sameStyle2{
+              padding:10px 15px; 
+              border-bottom: 1px solid #292929;
+              &:last-child{
+                border-bottom: none;
+              }
+            }
+            .hot-labels{
+               @extend %sameStyle1;
+              .hot-label{
+                @extend %sameStyle2;
+                >a:hover{
+                  color: #337ab7;
+                }
+              }
+            }
+            .recent-comments{
+              @extend %sameStyle1;
+              .comment-label{
+                @extend %sameStyle2;
+                .name{
+                  font-weight: 700;
+                }
+                p:first-child{
+                  display: flex;
+                  justify-content: space-between;
+                  }
+                }
+                p:last-child{
+                  >a{
+                    color: gray;
+                    &:hover{
+                      color: #337ab7;
+                    }
+                  }
+              }
+            }
+        }
+      }
+    }
+    .footer{
+       width:100%; 
+       background: #191818;
+       text-align: center;
+       color: #a2a2a2;
+       .labelSet{
+        padding: 15px 0;
+         >a{
+           color: #a2a2a2;
+           margin-left: 15px;
+           &:hover{
+             color: #337ab7;
+           }
+         }
+       }
+       .copyright{
+        padding-bottom: 15px;
+        >a{
+          color: #a2a2a2;
+           &:hover{
+             color: #337ab7;
+           }
+        }
+       }
+    }
+  }
+}
